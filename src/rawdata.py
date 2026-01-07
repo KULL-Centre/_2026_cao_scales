@@ -248,7 +248,6 @@ def initIDPsRgs(normal=True, use_newdata=False, validate=False, giulio=True, pat
         # 10.1002/pro.4986
         # SAXS data already included in experimentalSAXS
         fasta_sfAFP = """CKGADGAHGVNGCPGTAGAAGSVGGPGCDGGHGGNGGNGNPGCAGGVGGAGGASGGTGVGGWGGKGGSGTPKGADGAPGAPGSHHWHHHHHH""".replace('\n', '')
-        # proteins.loc['sfAFP@50'] = dict(temp=293.15, expRg=None, expRgErr=None, pH=7.5, fasta=list(fasta_sfAFP), ionic=0.101)
         proteins.loc['sfAFP'] = dict(temp=293.15, expRg=2.3, expRgErr=0.11, pH=7.5, fasta=list(fasta_sfAFP), ionic=0.351)
 
         # https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0162950#sec023
@@ -260,40 +259,6 @@ def initIDPsRgs(normal=True, use_newdata=False, validate=False, giulio=True, pat
         # SASDCY4
         fasta_RNaseE603_850 = """ERQQDRRKPRQNNRRDRNERRDTRSERTEGSDNREENRRNRRQAQQQTAETRESRQQAEVTEKARTADEQQAPRRERSRRRNDDKRQAQQEAKALNVEEQSVQETEQEERVRPVQPRRKQRQLNQKVRYEQSVAEEAVVAPVVEETVAAEPIVQEAPAPRTELVKVPLPVVAQTAPEQQEENNADNRDNGGMPRRSRRSPRHLRVSGQRRRRYRDERYPTQSPMPLTVACASPELASGKVWIRYPIVRHHHHHH""".replace('\n', '')
         proteins.loc['RNaseE603_850'] = dict(temp=288, expRg=5.26, expRgErr=0.031, pH=7.5, fasta=list(fasta_RNaseE603_850), ionic=0.274)  # recalculated Rg and err
-
-        # https://journals.asm.org/doi/10.1128/mBio.00810-20
-        # duplicated sequence compared with Giulio's data, but SAXS data can be used later on
-        # SASDEX4
-        # fasta_UL11StII = """MGLSFSGTRPCCCRNNVLITDDGEVVSLTAHDFDVVDIESEEEGNFYVPPDMRGVTRAPGRQRLRSSDPPSRHTHRRTPGGACPATQFPPPMSDSEWSHPQFEK""".replace('\n', '')
-        # proteins.loc['UL11StII'] = dict(temp=277, expRg=2.429, expRgErr=0.2, pH=7.5, fasta=list(fasta_UL11StII), ionic=0.122)
-
-        # https://www.frontiersin.org/articles/10.3389/fmolb.2021.779240/full
-        # duplicated sequence compared with Giulio's data, but SAXS data can be used later on
-        # SASDLT4
-        # SASDLU4
-        # fasta_Tau2N3R = """MAEPRQEFEVMEDHAGTYGLGDRKDQGGYTMHQDQEGDTDAGLKESPLQTPTEDGSEEPGSETSDAKSTPTAEDVTAPLVDEGAPGKQAAAQPHTEIPEGTTAEEAGIGDTPSLEDEAAGHVTQARMVSKSKDGTGSDDKKAKGADGKTKIATPRGAAPPGQKGQANATRIPAKTPPAPKTPPSSGEPPKSGDRSGYSSPGSPGTPGSRSRTPSLPTPPTREPKKVAVVRTPPKSPSSAKSRLQTAPVPMPDLKNVKSKIGSTENLKHQPGGGKVQIVYKPVDLSKVTSKCGSLGNIHHKPGGGQVEVKSEKLDFKDRVQSKIGSLDNITHVPGGGNKKIETHKLTFRENAKAKTDHGAEIVYKSPVVSGDTSPRHLSNVSSTGSIDMVDSPQLATLADEVSASLAKQGL""".replace('\n', '')
-        # fasta_Tau2N4R = """MAEPRQEFEVMEDHAGTYGLGDRKDQGGYTMHQDQEGDTDAGLKESPLQTPTEDGSEEPGSETSDAKSTPTAEDVTAPLVDEGAPGKQAAAQPHTEIPEGTTAEEAGIGDTPSLEDEAAGHVTQARMVSKSKDGTGSDDKKAKGADGKTKIATPRGAAPPGQKGQANATRIPAKTPPAPKTPPSSGEPPKSGDRSGYSSPGSPGTPGSRSRTPSLPTPPTREPKKVAVVRTPPKSPSSAKSRLQTAPVPMPDLKNVKSKIGSTENLKHQPGGGKVQIINKKLDLSNVQSKCGSKDNIKHVPGGGSVQIVYKPVDLSKVTSKCGSLGNIHHKPGGGQVEVKSEKLDFKDRVQSKIGSLDNITHVPGGGNKKIETHKLTFRENAKAKTDHGAEIVYKSPVVSGDTSPRHLSNVSSTGSIDMVDSPQLATLADEVSASLAKQGL""".replace('\n', '')
-        # proteins.loc['Tau2N4R'] = dict(temp=293.2, expRg=6.72, expRgErr=0.28, pH=7.4, fasta=list(fasta_Tau2N4R), ionic=0.15)
-        # proteins.loc['Tau2N3R'] = dict(temp=293.2, expRg=6.33, expRgErr=0.28, pH=7.4, fasta=list(fasta_Tau2N3R), ionic=0.15)
-
-        # https://doi.org/10.1016/j.str.2018.10.026
-        # duplicated sequence compared with Giulio's data, but SAXS data can be used later on
-        # SASDEE2, removed because the salt concentration is not consistent between the reported values in the article and SASBDB website.
-        # fasta_ERa_NTD = """SNAMTMTLHTKASGMALLHQIQGNELEPLNRPQLKIPLERPLGEVYLDSSKPAVYNYPEGAAYEFNAAAAANAQVYGQTGLPYGPGSEAAAFGSNGLGGFPPLNSVSPSPLMLLHPPPQLSPFLQPHGQQVPYYLENEPSGYTVREAGPPAFYRPNSDNRRQGGRERLASTNDKGSMAMESAKETRY""".replace('\n', '')
-        # proteins.loc['ERa_NTD'] = dict(temp=283.15, expRg=3, expRgErr=0.12, pH=7.4, fasta=list(fasta_ERa_NTD), ionic=0.305)
-
-        # https://www.sciencedirect.com/science/article/pii/S002192582031036X?via%3Dihub
-        # duplicated sequence compared with Giulio's data, but SAXS data can be used later on
-        # also has PRE data, but not included yet
-        # SASDD92
-        # fasta_MAP2c = """MADERKDEGKAPHWTSASLTEAAAHPHSPEMKDQGGSGEGLSRSANGFPYREEEEGAFGEHGSQGTYSDTKENGINGELTSADRETAEEVSARIVQVVTAEAVAVLKGEQEKEAQHKDQPAALPLAAEETVNLPPSPPPSPASEQTAALEEATSGESAQAPSAFKQAKDKVTDGITKSPEKRSSLPRPSSILPPRRGVSGDREENSFSLNSSISSARRTTRSEPIRRAGKSGTSTPTTPGSTAITPGTPPSYSSRTPGTPGTPSYPRTPGTPKSGILVPSEKKVAIIRTPPKSPATPKQLRLINQPLPDLKNVKSKIGSTDNIKYQPKGGQVQIVTKKIDLSHVTSKCGSLKNIRHRPGGGRVKIESVKLDFKEKAQAKVGSLDNAHHVPGGGNVKIDSQKLNFREHAKARVDHGAEIITQSPSRSSVASPRRLSNVSSSGSINLLESPQLATLAEDVTAALAKQGL""".replace('\n', '')
-        # proteins.loc['MAP2c'] = dict(temp=293.27, expRg=6.59, expRgErr=1.3, pH=6.9, fasta=list(fasta_MAP2c), ionic=0.163)
-
-        # https://academic.oup.com/nar/article/45/21/12170/4129030
-        # duplicated sequence compared with Giulio's data, but SAXS data can be used later on
-        # SASDC62
-        # fasta_Bdomain = """GPPGSMAGGGGSSDGSGRAAGRRASRSSGRARRGRHEPGLGGPAERGAG""".replace('\n', '')
-        # proteins.loc['Bdomain'] = dict(temp=277.15, expRg=1.648, expRgErr=0.05, pH=7, fasta=list(fasta_Bdomain), ionic=0.154)
 
         # https://www.sciencedirect.com/science/article/pii/S2001037021003949?via%3Dihub
         # SASDKD9
@@ -344,18 +309,9 @@ def initIDPsRgs(normal=True, use_newdata=False, validate=False, giulio=True, pat
         fasta_p27Cv56 = """GSHMKGACGSSVLGTGNPRNQAHVSDTSLEEDDDEQDDSTPDEVSQACTIVASALDINAATPRSPKASPKRKRKRQSTAPAQGNEPPGNAGSVEQTPKKPGLRRRQT""".replace('\n', '')
         fasta_p27Cv78 = """GSHMKGACALPSGVVPAEDDDDDEEEEDDQDPAQPQAVQGAAPSSGTNNSQPILPSIAVNSTTGPNSTAGKKKRKRRRTRHSNCATLSSAGSVEQTPKKPGLRRRQT""".replace('\n', '')
         fasta_A1S = """GSMASASSSQRGRSGSGNFGGGRGGGFGGNDNFGRGGNFSGRGGFGGSRGGGGYGGSGDGYNGFGNDGSNFGGGGNYNNQSSNFGPMKGGNFGGRSSGPYGGGGQYFAKPRNQGGYGGSSSSSSYGSGRRF""".replace('\n', '')  # after deletion
-        # fasta_D91FATZ1 = """GPTVGGQLGTAGQGFSYSKSNGRGGSQAGGSGSAGQYGSDQQHHLGSGSGAGGTGGPAGQAGRGGAAGTAGVGETGSGDQAGGEGKHITVFKTYISPWERAMGVDPQQKMELGIDLLAYGAKAELPKYKSFNRTAMPYGGYEKASKRMTFQMPKFDLGPLLSEPLVLYNQNLSNRPSFNRTPIPWLSSGEPVDYNVDIGIPLDGETEEL""".replace('\n', '')
-        # fasta_NFATZ1 = """MAHHHHHHVDDDDKIMPLSGTPAPNKKRKSSKLIMELTGGGQESSGLNLGKKISVPRDVMLEELSLLTNRGSKMFKLRQMRVEKFIYENHPDVFSDSSMDHFQKFLPTVGGQLGTAGQGFSYSKSNGRGGSQAGGSGSAGQYGSDQQHHLGSGSGAGGTGGPAGQAGRGGAAGTAGVGETGSGDQAGGEAE""".replace('\n', '')
-        fasta_ChiZ164 = """SNAMTPVRPPHTPDPLNLRGPLDGPRWRRAEPAQSRRPGRSRPGGAPLRYHRTGVGMSRTGHGSRPV"""  # DOI: 10.3390/biom10060946
         fasta_cDAXX = """SPMSSLQISNEKNLEPGKQISRSSGEQQNKGRIVSPSLLSEEPLAPSSIDAESNGEQPEELTLEEESPVSQLFELEIEALPLDTPSSVETDISSSRKQSEEPFTTVLENGAGMVSSTSFNGGVSPHNWGDSGPPCKKSRKEKKQTGSGPLGNSYVERQRSVHEKNGKKICTLPSPPSPLASLAPVADSSTRVDSPSHGLVTSSLCIPSPARLSQTPHSQPPRPGTCKTSVATQCDPEEIIVLSDSD""".replace('\n', '')
         proteins.loc['cDAXX'] = dict(temp=293, expRg=4.75, expRgErr=0.05, pH=8.0, fasta=list(fasta_cDAXX), ionic=0.13)
-        # proteins.loc['ChiZ164'] = dict(temp=293, expRg=2.42, expRgErr=0.01, pH=7.0, fasta=list(fasta_ChiZ164), ionic=0.065)  # salt concentration is too low
-        # proteins.loc['D91FATZ1'] = dict(temp=293, expRg=4.0, expRgErr=0.1, pH=7.5, fasta=list(fasta_D91FATZ1), ionic=0.18)  # duplicated
-        # proteins.loc['NFATZ1'] = dict(temp=293, expRg=3.6, expRgErr=0.1, pH=7.5, fasta=list(fasta_NFATZ1), ionic=0.18)
-        # proteins.loc['A1S@S50'] = dict(temp=293, expRg=2.645, expRgErr=0.02, pH=7.5, fasta=list(fasta_A1S), ionic=0.05)
         proteins.loc['A1S@S150'] = dict(temp=293, expRg=2.65, expRgErr=0.02, pH=7.5, fasta=list(fasta_A1S), ionic=0.15)
-        # proteins.loc['A1S@S300'] = dict(temp=293, expRg=2.62, expRgErr=0.02, pH=7.5, fasta=list(fasta_A1S), ionic=0.3)
-        # proteins.loc['A1S@S500'] = dict(temp=293, expRg=2.528, expRgErr=0.02, pH=7.5, fasta=list(fasta_A1S), ionic=0.5)
         proteins.loc['p27Cv14'] = dict(temp=293, expRg=2.936, expRgErr=0.13, pH=7.2, fasta=list(fasta_p27Cv14), ionic=0.095)
         proteins.loc['p27Cv15'] = dict(temp=293, expRg=2.915, expRgErr=0.1, pH=7.2, fasta=list(fasta_p27Cv15), ionic=0.095)
         proteins.loc['p27Cv31'] = dict(temp=293, expRg=2.81, expRgErr=0.18, pH=7.2, fasta=list(fasta_p27Cv31), ionic=0.095)
@@ -456,12 +412,6 @@ def initIDPsRgs(normal=True, use_newdata=False, validate=False, giulio=True, pat
         # SAXS data already included in experimentalSAXS
         fasta_CTR_XRCC4 = """GSAAQEREKDIKQEGETAICSEMTADRDPVYDESTDEESENQTDLSGLASAAVSKDDSIISSLDVTDIAPSRKRRQRMQRNLGTEPKMAPQENQLQEKENSRPDSSLPETSKKEHISAENMSLETLRNSSPEDLFDEI""".replace('\n', '')
         proteins.loc['CTR_XRCC4'] = dict(temp=298,expRg=3.42,expRgErr=0.15,pH=6.5,fasta=list(fasta_CTR_XRCC4),ionic=0.16)
-
-        # https://link.springer.com/article/10.1140/epje/s10189-024-00409-8
-        # SASDT47
-        # SAXS data already included in experimentalSAXS, aggregation?
-        # fasta_Nlp441_543 = """MGCGPAYYNSHVQEEQTEVEETIEATKAEEAKDEPPSEGEAEEEEKEKEEGEEEEGAEEEEAAKDESEDTKEEEEGGEGEEEDTKESEEEEKKEESAGEEQVAKKKDGCG""".replace('\n', '')
-        # proteins.loc['Nlp441_543'] = dict(temp=297.15,expRg=4.07,expRgErr=3.8,pH=8.0,fasta=list(fasta_Nlp441_543),ionic=0.261)
 
         # https://www.nature.com/articles/s42003-024-05856-9
         # SASDKH8, it could probably form some transient secondary structures, if the predictions are not good, just remove this protein;
