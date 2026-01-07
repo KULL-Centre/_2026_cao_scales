@@ -12,7 +12,7 @@ This repository contains codes, raw data and parameter files that used to reprod
 
 `src/expPREs/`: paramagnetic relaxation enhancement (PRE) NMR data for validation;
 
-`src/HPS_stickiness_modified.csv`: parameters file containing optimized lambda values using residue-specific and averaged radius;
+`src/HPS_stickiness_modified.csv`: parameters file containing optimized lambda values using residue-specific (`lambda_ori`) and averaged (`lambda_ave`) radius;
 
 `stickiness.ipynb`: jupyter scripts for plotting;
 
