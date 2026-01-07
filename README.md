@@ -2,19 +2,17 @@
 
 
 ---
-This repository contains codes, raw data and parameter files that used to reproduce the results in [A coarse-grained model for disordered and multi-domain proteins](https://onlinelibrary.wiley.com/doi/10.1002/pro.5172).
+This repository contains codes, raw data and parameter files that used to reproduce the results in [A stickiness scale for disordered proteins]
 
 ## Layout
 
-`data/`: raw data used for making figures in the paper; 
+`src/`: all codes, and data used to reproduce results contained in the paper;
 
-`paper_figures/`: figures (pdf format) in the paper; 
+`src/data/`: raw simulation data used for making figures in the paper;
 
-`src/`: all codes, and experimental data used to reproduce results contained in the paper;
-
-`src/expPREs/`: paramagnetic relaxation enhancement (PRE) NMR data for optimization;
+`src/expPREs/`: paramagnetic relaxation enhancement (PRE) NMR data for validation;
 
 `src/HPS_stickiness_modified.csv`: parameters file containing optimized lambda values using residue-specific and averaged radius;
 
-`stickiness.ipynb`: jupyter of plotting;
+`stickiness.ipynb`: jupyter scripts for plotting;
 
